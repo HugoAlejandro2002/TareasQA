@@ -24,20 +24,15 @@ public class AerolineaServiceTest {
 
     @Test
     public void testReservaVuelo_NoExistenPasajes() {
-        // Crear el mock del servicio
         AerolineaService aerolineaService = Mockito.mock(AerolineaService.class);
 
-        // Configurar los mocks para los métodos auxiliares
         Mockito.when(aerolineaService.existenPasajes("La Paz", 2)).thenReturn(false);
 
-        // Configurar el mock del método principal 'reservaVuelo'
         Mockito.when(aerolineaService.reservaVuelo("La Paz", 2, 29, 5, 2023))
                 .thenReturn("no existen suficientes pasajes para La Paz");
 
-        // Ejecutar el método
         String resultado = aerolineaService.reservaVuelo("La Paz", 2, 29, 5, 2023);
 
-        // Verificar el resultado esperado
         Assertions.assertEquals("no existen suficientes pasajes para La Paz", resultado);
     }
 }
