@@ -26,4 +26,4 @@ jobs:
           gradle-version: '8.9'
     
       - name: Execute Unit Test
-        run: gradle test --info
+        run: gradle test
