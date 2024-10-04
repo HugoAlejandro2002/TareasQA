@@ -24,6 +24,8 @@ public class CalculatorAWSStaticTestMock {
         int actualResult = aws2.getFact(4);
         int expectedResult = 24;
         Assertions.assertEquals(expectedResult,actualResult,"ERROR el factorial es incorrecto!");
-
+        if (mockedStatic != null) {
+            mockedStatic.close();  // Libera el mock estático
+        }
     }
 }

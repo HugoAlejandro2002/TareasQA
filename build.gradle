@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
 group = 'org.example'
@@ -25,5 +26,17 @@ dependencies {
 }
 
 test {
+    println ' ****************************'
+    println ' **        Unit Test       **'
+    println ' ****************************'
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    finalizedBy jacocoTestReport
 }
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+}
+

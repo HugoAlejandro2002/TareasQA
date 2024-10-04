@@ -5,6 +5,7 @@ import bancoStatic.AfpServiceGlobal;
 import bancoStatic.AsfiServiceGlobal;
 import bancoStatic.BancoUPB2;
 import bancoStatic.SegipServiceGlobal;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
@@ -50,6 +51,20 @@ public class Banco2Test {
         Assertions.assertEquals("usted no esta habilitado para prestamos",
                 bancoUPB.getAmountMoney(888999,3000),
                 "ERROR el prestamo es incorrecto");
+
+
+    }
+    @AfterEach
+    public void after(){
+        if (segip != null) {
+            segip.close();
+        }
+        if (asfi != null) {
+            asfi.close();
+        }
+        if (afp != null) {
+            afp.close();
+        }
 
     }
 
