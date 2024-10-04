@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basicJunit.BasicJunit" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-02T20:47:46" hostname="HUGOALEJANDRO" time="0.03">
+  <properties/>
+  <testcase name="verifySomething2()" classname="basicJunit.BasicJunit" time="0.027"/>
+  <testcase name="Verificar el siguiente flujo ....." classname="basicJunit.BasicJunit" time="0.001"/>
+  <system-out><![CDATA[setup
+test2
+cleanup
+setup
+test1
+cleanup
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

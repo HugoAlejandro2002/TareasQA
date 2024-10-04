@@ -2,12 +2,14 @@ package calcServiceMock;
 
 import calcService.CalculatorAWS;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CalcServiceTestIncorrect {
 
     CalculatorAWS calculatorAWS;
 
+    @Disabled
     @Test
     public void verifyFact(){
         calculatorAWS = new CalculatorAWS();
