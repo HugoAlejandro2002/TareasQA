@@ -1,0 +1,6 @@
+setup
+test2
+	cleanup
+setup
+test1
+	cleanup
